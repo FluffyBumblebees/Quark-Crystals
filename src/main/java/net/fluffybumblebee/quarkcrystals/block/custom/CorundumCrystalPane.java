@@ -1,7 +1,6 @@
 package net.fluffybumblebee.quarkcrystals.block.custom;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fluffybumblebee.quarkcrystals.util.ArrayDiscriminatorUtil;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.block.PaneBlock;
@@ -31,26 +30,7 @@ public class CorundumCrystalPane extends PaneBlock {
 
     @Override
     public boolean isSideInvisible(BlockState state, BlockState stateFrom, Direction direction) {
-        return stateFrom.isOf(this) ||
-                stateFrom.isOf(ArrayDiscriminatorUtil.getCorundumPane[1]) ||
-                stateFrom.isOf(ArrayDiscriminatorUtil.getCorundumPane[2]) ||
-                stateFrom.isOf(ArrayDiscriminatorUtil.getCorundumPane[3]) ||
-                stateFrom.isOf(ArrayDiscriminatorUtil.getCorundumPane[4]) ||
-                stateFrom.isOf(ArrayDiscriminatorUtil.getCorundumPane[5]) ||
-                stateFrom.isOf(ArrayDiscriminatorUtil.getCorundumPane[6]) ||
-                stateFrom.isOf(ArrayDiscriminatorUtil.getCorundumPane[7]) ||
-                stateFrom.isOf(ArrayDiscriminatorUtil.getCorundumPane[8]) ||
-                stateFrom.isOf(ArrayDiscriminatorUtil.getCorundumPane[9]) ||
-                stateFrom.isOf(ArrayDiscriminatorUtil.getCrystalPane[1]) ||
-                stateFrom.isOf(ArrayDiscriminatorUtil.getCrystalPane[2]) ||
-                stateFrom.isOf(ArrayDiscriminatorUtil.getCrystalPane[3]) ||
-                stateFrom.isOf(ArrayDiscriminatorUtil.getCrystalPane[4]) ||
-                stateFrom.isOf(ArrayDiscriminatorUtil.getCrystalPane[5]) ||
-                stateFrom.isOf(ArrayDiscriminatorUtil.getCrystalPane[6]) ||
-                stateFrom.isOf(ArrayDiscriminatorUtil.getCrystalPane[7]) ||
-                stateFrom.isOf(ArrayDiscriminatorUtil.getCrystalPane[8]) ||
-                stateFrom.isOf(ArrayDiscriminatorUtil.getCrystalPane[9]) ||
-                super.isSideInvisible(state, stateFrom, direction);
+        return stateFrom.isOf(this) || super.isSideInvisible(state, stateFrom, direction);
     }
 
     public void onProjectileHit(World world, BlockState state, BlockHitResult hit, ProjectileEntity projectile) {

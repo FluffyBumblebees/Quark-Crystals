@@ -2,12 +2,12 @@ package net.fluffybumblebee.quarkcrystals;
 
 import net.fabricmc.api.ModInitializer;
 import net.fluffybumblebee.quarkcrystals.block.QCBlocks;
-import net.fluffybumblebee.quarkcrystals.item.QCItems;
+import net.fluffybumblebee.quarkcrystals.item.QCItemGroup;
 
 public class QuarkCrystals implements ModInitializer {
 
 	@Override public void onInitialize() {
-		QCItems.registerItems();
-		QCBlocks.registerBlocks();
+		QCBlocks.initClass();
+		QCItemGroup.registerItemgroup();
 	}
 }

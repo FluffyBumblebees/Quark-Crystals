@@ -1,138 +1,27 @@
 package net.fluffybumblebee.quarkcrystals.world.gen.feature;
 
-import net.fluffybumblebee.quarkcrystals.util.ArrayDiscriminatorUtil;
+import net.fluffybumblebee.quarkcrystals.util.QCUtil;
 import net.minecraft.util.registry.RegistryEntry;
-import net.minecraft.world.gen.YOffset;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
+import net.minecraft.world.gen.feature.GeodeFeatureConfig;
 import net.minecraft.world.gen.feature.PlacedFeature;
-import net.minecraft.world.gen.feature.PlacedFeatures;
-import net.minecraft.world.gen.feature.UndergroundPlacedFeatures;
-import net.minecraft.world.gen.placementmodifier.*;
 
-public class QCUndergroundPlacedFeatures extends UndergroundPlacedFeatures {
-    public static final RegistryEntry<PlacedFeature> BLACK_GEODE = PlacedFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(1),
-            QCUndergroundConfiguredFeatures.BLACK_GEODE,
-            RarityFilterPlacementModifier.of(120),
-            SquarePlacementModifier.of(),
-            HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
-                    YOffset.fixed(30)),
-            BiomePlacementModifier.of()
-    );
-    public static final RegistryEntry<PlacedFeature> BLUE_GEODE = PlacedFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(2),
-            QCUndergroundConfiguredFeatures.BLUE_GEODE,
-            RarityFilterPlacementModifier.of(120),
-            SquarePlacementModifier.of(),
-            HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
-                    YOffset.fixed(30)),
-            BiomePlacementModifier.of()
-    );
-    public static final RegistryEntry<PlacedFeature> GREEN_GEODE = PlacedFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(3),
-            QCUndergroundConfiguredFeatures.GREEN_GEODE,
-            RarityFilterPlacementModifier.of(120),
-            SquarePlacementModifier.of(),
-            HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
-                    YOffset.fixed(30)),
-            BiomePlacementModifier.of()
-    );
-    public static final RegistryEntry<PlacedFeature> INDIGO_GEODE = PlacedFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(4),
-            QCUndergroundConfiguredFeatures.INDIGO_GEODE,
-            RarityFilterPlacementModifier.of(120),
-            SquarePlacementModifier.of(),
-            HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
-                    YOffset.fixed(30)),
-            BiomePlacementModifier.of()
-    );
-    public static final RegistryEntry<PlacedFeature> ORANGE_GEODE = PlacedFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(5),
-            QCUndergroundConfiguredFeatures.ORANGE_GEODE,
-            RarityFilterPlacementModifier.of(120),
-            SquarePlacementModifier.of(),
-            HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
-                    YOffset.fixed(30)),
-            BiomePlacementModifier.of()
-    );
-    public static final RegistryEntry<PlacedFeature> RED_GEODE = PlacedFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(6),
-            QCUndergroundConfiguredFeatures.RED_GEODE,
-            RarityFilterPlacementModifier.of(120),
-            SquarePlacementModifier.of(),
-            HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
-                    YOffset.fixed(30)),
-            BiomePlacementModifier.of()
-    );
-    public static final RegistryEntry<PlacedFeature> PINK_GEODE = PlacedFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(7),
-            QCUndergroundConfiguredFeatures.PINK_GEODE,
-            RarityFilterPlacementModifier.of(120),
-            SquarePlacementModifier.of(),
-            HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
-                    YOffset.fixed(30)),
-            BiomePlacementModifier.of()
-    );
-    public static final RegistryEntry<PlacedFeature> WHITE_GEODE = PlacedFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(8),
-            QCUndergroundConfiguredFeatures.WHITE_GEODE,
-            RarityFilterPlacementModifier.of(120),
-            SquarePlacementModifier.of(),
-            HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
-                    YOffset.fixed(30)),
-            BiomePlacementModifier.of()
-    );
-    public static final RegistryEntry<PlacedFeature> YELLOW_GEODE = PlacedFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(9),
-            QCUndergroundConfiguredFeatures.YELLOW_GEODE,
-            RarityFilterPlacementModifier.of(120),
-            SquarePlacementModifier.of(),
-            HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
-                    YOffset.fixed(30)),
-            BiomePlacementModifier.of()
-    );
-    public static final RegistryEntry<PlacedFeature>  CYAN_GEODE = PlacedFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(10),
-            QCUndergroundConfiguredFeatures.CYAN_GEODE,
-            RarityFilterPlacementModifier.of(120),
-            SquarePlacementModifier.of(),
-            HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
-                    YOffset.fixed(30)),
-            BiomePlacementModifier.of()
-    );
-    public static final RegistryEntry<PlacedFeature>  PURPLE_GEODE = PlacedFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(11),
-            QCUndergroundConfiguredFeatures.PURPLE_GEODE,
-            RarityFilterPlacementModifier.of(120),
-            SquarePlacementModifier.of(),
-            HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
-                    YOffset.fixed(30)),
-            BiomePlacementModifier.of()
-    );
-    public static final RegistryEntry<PlacedFeature>  BROWN_GEODE = PlacedFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(12),
-            QCUndergroundConfiguredFeatures.BROWN_GEODE,
-            RarityFilterPlacementModifier.of(120),
-            SquarePlacementModifier.of(),
-            HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
-                    YOffset.fixed(30)),
-            BiomePlacementModifier.of()
-    );
-    public static final RegistryEntry<PlacedFeature>  RAINBOW_GEODE = PlacedFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(13),
-            QCUndergroundConfiguredFeatures.RAINBOW_GEODE,
-            RarityFilterPlacementModifier.of(480),
-            SquarePlacementModifier.of(),
-            HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
-                    YOffset.fixed(30)),
-            BiomePlacementModifier.of()
-    );
-    public static final RegistryEntry<PlacedFeature>  DARK_GEODE = PlacedFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(14),
-            QCUndergroundConfiguredFeatures.DARK_GEODE,
-            RarityFilterPlacementModifier.of(240),
-            SquarePlacementModifier.of(),
-            HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
-                    YOffset.fixed(30)),
-            BiomePlacementModifier.of()
-    );
+public class QCUndergroundPlacedFeatures {
+    public static RegistryEntry<PlacedFeature> register(RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> geode, String name) {
+        return QCUtil.registerPlacedGeode(geode, name);
+    }
+    public static final RegistryEntry<PlacedFeature> BLACK_GEODE_PLACED = register(QCUndergroundConfiguredFeatures.BLACK_GEODE, "black");
+    public static final RegistryEntry<PlacedFeature> BLUE_GEODE_PLACED = register(QCUndergroundConfiguredFeatures.BLUE_GEODE, "blue");
+    public static final RegistryEntry<PlacedFeature> GREEN_GEODE_PLACED = register(QCUndergroundConfiguredFeatures.GREEN_GEODE, "green");
+    public static final RegistryEntry<PlacedFeature> INDIGO_GEODE_PLACED = register(QCUndergroundConfiguredFeatures.INDIGO_GEODE, "indigo");
+    public static final RegistryEntry<PlacedFeature> ORANGE_GEODE_PLACED = register(QCUndergroundConfiguredFeatures.ORANGE_GEODE, "orange");
+    public static final RegistryEntry<PlacedFeature> RED_GEODE_PLACED = register(QCUndergroundConfiguredFeatures.RED_GEODE, "red");
+    public static final RegistryEntry<PlacedFeature> PINK_GEODE_PLACED = register(QCUndergroundConfiguredFeatures.PINK_GEODE, "pink");
+    public static final RegistryEntry<PlacedFeature> WHITE_GEODE_PLACED = register(QCUndergroundConfiguredFeatures.WHITE_GEODE, "white");
+    public static final RegistryEntry<PlacedFeature> YELLOW_GEODE_PLACED = register(QCUndergroundConfiguredFeatures.YELLOW_GEODE, "yellow");
+    public static final RegistryEntry<PlacedFeature> CYAN_GEODE_PLACED = register(QCUndergroundConfiguredFeatures.CYAN_GEODE, "cyan");
+    public static final RegistryEntry<PlacedFeature> PURPLE_GEODE_PLACED = register(QCUndergroundConfiguredFeatures.PURPLE_GEODE, "purple");
+    public static final RegistryEntry<PlacedFeature> BROWN_GEODE_PLACED = register(QCUndergroundConfiguredFeatures.BROWN_GEODE, "brown");
+    public static final RegistryEntry<PlacedFeature> RAINBOW_GEODE_PLACED = register(QCUndergroundConfiguredFeatures.RAINBOW_GEODE, "rainbow");
+    public static final RegistryEntry<PlacedFeature> DARK_GEODE_PLACED = register(QCUndergroundConfiguredFeatures.DARK_GEODE, "dark");
 }

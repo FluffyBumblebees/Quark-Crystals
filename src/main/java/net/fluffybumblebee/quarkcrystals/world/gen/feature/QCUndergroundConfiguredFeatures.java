@@ -1,294 +1,31 @@
 package net.fluffybumblebee.quarkcrystals.world.gen.feature;
 
-import net.fluffybumblebee.quarkcrystals.util.ArrayDiscriminatorUtil;
-import net.minecraft.block.Blocks;
-import net.minecraft.tag.BlockTags;
-import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.fluffybumblebee.quarkcrystals.block.QCBlocks;
+import net.fluffybumblebee.quarkcrystals.block.custom.CorundumCluster;
+import net.fluffybumblebee.quarkcrystals.util.QCUtil;
+import net.minecraft.block.Block;
 import net.minecraft.util.registry.RegistryEntry;
-import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
+import net.minecraft.world.gen.feature.GeodeFeatureConfig;
 
-import java.util.List;
 
-public class QCUndergroundConfiguredFeatures extends UndergroundConfiguredFeatures {
-    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> BLACK_GEODE = ConfiguredFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(1),
-            Feature.GEODE,
-            new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCrystal[1]),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCorundum[1]),
-                    BlockStateProvider.of(Blocks.BASALT),
-                    BlockStateProvider.of(Blocks.TUFF),
-                    List.of(ArrayDiscriminatorUtil.getCorundumCluster[1].getDefaultState()),
-                    BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
-                    new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
-                    new GeodeCrackConfig(0.95, 2.0, 2), 0.35, 0.083, true,
-                    UniformIntProvider.create(4, 6),
-                    UniformIntProvider.create(3, 4),
-                    UniformIntProvider.create(1, 2),
-                    -16,
-                    16,
-                    0.05,
-                    1)
-    );
-    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> BLUE_GEODE = ConfiguredFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(2),
-            Feature.GEODE,
-            new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCrystal[2]),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCorundum[2]),
-                    BlockStateProvider.of(Blocks.BASALT),
-                    BlockStateProvider.of(Blocks.TUFF),
-                    List.of(ArrayDiscriminatorUtil.getCorundumCluster[2].getDefaultState()),
-                    BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
-                    new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
-                    new GeodeCrackConfig(0.95, 2.0, 2), 0.35, 0.083, true,
-                    UniformIntProvider.create(4, 6),
-                    UniformIntProvider.create(3, 4),
-                    UniformIntProvider.create(1, 2),
-                    -16,
-                    16,
-                    0.05,
-                    1)
-    );
-    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> GREEN_GEODE = ConfiguredFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(3),
-            Feature.GEODE,
-            new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCrystal[3]),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCorundum[3]),
-                    BlockStateProvider.of(Blocks.BASALT),
-                    BlockStateProvider.of(Blocks.TUFF),
-                    List.of(ArrayDiscriminatorUtil.getCorundumCluster[3].getDefaultState()),
-                    BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
-                    new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
-                    new GeodeCrackConfig(0.95, 2.0, 2), 0.35, 0.083, true,
-                    UniformIntProvider.create(4, 6),
-                    UniformIntProvider.create(3, 4),
-                    UniformIntProvider.create(1, 2),
-                    -16,
-                    16,
-                    0.05,
-                    1)
-    );
-    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> INDIGO_GEODE = ConfiguredFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(4),
-            Feature.GEODE,
-            new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCrystal[4]),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCorundum[4]),
-                    BlockStateProvider.of(Blocks.BASALT),
-                    BlockStateProvider.of(Blocks.TUFF),
-                    List.of(ArrayDiscriminatorUtil.getCorundumCluster[4].getDefaultState()),
-                    BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
-                    new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
-                    new GeodeCrackConfig(0.95, 2.0, 2), 0.35, 0.083, true,
-                    UniformIntProvider.create(4, 6),
-                    UniformIntProvider.create(3, 4),
-                    UniformIntProvider.create(1, 2),
-                    -16,
-                    16,
-                    0.05,
-                    1)
-    );
-    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> ORANGE_GEODE = ConfiguredFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(5),
-            Feature.GEODE,
-            new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCrystal[5]),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCorundum[5]),
-                    BlockStateProvider.of(Blocks.BASALT),
-                    BlockStateProvider.of(Blocks.TUFF),
-                    List.of(ArrayDiscriminatorUtil.getCorundumCluster[5].getDefaultState()),
-                    BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
-                    new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
-                    new GeodeCrackConfig(0.95, 2.0, 2), 0.35, 0.083, true,
-                    UniformIntProvider.create(4, 6),
-                    UniformIntProvider.create(3, 4),
-                    UniformIntProvider.create(1, 2),
-                    -16,
-                    16,
-                    0.05,
-                    1)
-    );
-    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> RED_GEODE = ConfiguredFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(6),
-            Feature.GEODE,
-            new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCrystal[6]),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCorundum[6]),
-                    BlockStateProvider.of(Blocks.BASALT),
-                    BlockStateProvider.of(Blocks.TUFF),
-                    List.of(ArrayDiscriminatorUtil.getCorundumCluster[6].getDefaultState()),
-                    BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
-                    new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
-                    new GeodeCrackConfig(0.95, 2.0, 2), 0.35, 0.083, true,
-                    UniformIntProvider.create(4, 6),
-                    UniformIntProvider.create(3, 4),
-                    UniformIntProvider.create(1, 2),
-                    -16,
-                    16,
-                    0.05,
-                    1)
-    );
-    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> PINK_GEODE = ConfiguredFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(7),
-            Feature.GEODE,
-            new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCrystal[7]),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCorundum[7]),
-                    BlockStateProvider.of(Blocks.BASALT),
-                    BlockStateProvider.of(Blocks.TUFF),
-                    List.of(ArrayDiscriminatorUtil.getCorundumCluster[7].getDefaultState()),
-                    BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
-                    new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
-                    new GeodeCrackConfig(0.95, 2.0, 2), 0.35, 0.083, true,
-                    UniformIntProvider.create(4, 6),
-                    UniformIntProvider.create(3, 4),
-                    UniformIntProvider.create(1, 2),
-                    -16,
-                    16,
-                    0.05,
-                    1)
-    );
-    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> WHITE_GEODE = ConfiguredFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(8),
-            Feature.GEODE,
-            new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCrystal[8]),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCorundum[8]),
-                    BlockStateProvider.of(Blocks.BASALT),
-                    BlockStateProvider.of(Blocks.TUFF),
-                    List.of(ArrayDiscriminatorUtil.getCorundumCluster[8].getDefaultState()),
-                    BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
-                    new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
-                    new GeodeCrackConfig(0.95, 2.0, 2), 0.35, 0.083, true,
-                    UniformIntProvider.create(4, 6),
-                    UniformIntProvider.create(3, 4),
-                    UniformIntProvider.create(1, 2),
-                    -16,
-                    16,
-                    0.05,
-                    1)
-    );
-    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> YELLOW_GEODE = ConfiguredFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(9),
-            Feature.GEODE,
-            new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCrystal[9]),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCorundum[9]),
-                    BlockStateProvider.of(Blocks.BASALT),
-                    BlockStateProvider.of(Blocks.TUFF),
-                    List.of(ArrayDiscriminatorUtil.getCorundumCluster[9].getDefaultState()),
-                    BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
-                    new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
-                    new GeodeCrackConfig(0.95, 2.0, 2), 0.35, 0.083, true,
-                    UniformIntProvider.create(4, 6),
-                    UniformIntProvider.create(3, 4),
-                    UniformIntProvider.create(1, 2),
-                    -16,
-                    16,
-                    0.05,
-                    1)
-    );
-    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> CYAN_GEODE = ConfiguredFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(10),
-            Feature.GEODE,
-            new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCrystal[10]),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCorundum[10]),
-                    BlockStateProvider.of(Blocks.BASALT),
-                    BlockStateProvider.of(Blocks.TUFF),
-                    List.of(ArrayDiscriminatorUtil.getCorundumCluster[10].getDefaultState()),
-                    BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
-                    new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
-                    new GeodeCrackConfig(0.95, 2.0, 2), 0.35, 0.083, true,
-                    UniformIntProvider.create(4, 6),
-                    UniformIntProvider.create(3, 4),
-                    UniformIntProvider.create(1, 2),
-                    -16,
-                    16,
-                    0.05,
-                    1)
-    );
-    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> PURPLE_GEODE = ConfiguredFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(11),
-            Feature.GEODE,
-            new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCrystal[11]),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCorundum[11]),
-                    BlockStateProvider.of(Blocks.BASALT),
-                    BlockStateProvider.of(Blocks.TUFF),
-                    List.of(ArrayDiscriminatorUtil.getCorundumCluster[11].getDefaultState()),
-                    BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
-                    new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
-                    new GeodeCrackConfig(0.95, 2.0, 2), 0.35, 0.083, true,
-                    UniformIntProvider.create(4, 6),
-                    UniformIntProvider.create(3, 4),
-                    UniformIntProvider.create(1, 2),
-                    -16,
-                    16,
-                    0.05,
-                    1)
-    );
-    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> BROWN_GEODE = ConfiguredFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(12),
-            Feature.GEODE,
-            new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCrystal[12]),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCorundum[12]),
-                    BlockStateProvider.of(Blocks.BASALT),
-                    BlockStateProvider.of(Blocks.TUFF),
-                    List.of(ArrayDiscriminatorUtil.getCorundumCluster[12].getDefaultState()),
-                    BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
-                    new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
-                    new GeodeCrackConfig(0.95, 2.0, 2), 0.35, 0.083, true,
-                    UniformIntProvider.create(4, 6),
-                    UniformIntProvider.create(3, 4),
-                    UniformIntProvider.create(1, 2),
-                    -16,
-                    16,
-                    0.05,
-                    1)
-    );
-    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> RAINBOW_GEODE = ConfiguredFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(13),
-            Feature.GEODE,
-            new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCrystal[13]),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCorundum[13]),
-                    BlockStateProvider.of(Blocks.BASALT),
-                    BlockStateProvider.of(Blocks.TUFF),
-                    List.of(ArrayDiscriminatorUtil.getCorundumCluster[13].getDefaultState()),
-                    BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
-                    new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
-                    new GeodeCrackConfig(0.95, 2.0, 2), 0.35, 0.083, true,
-                    UniformIntProvider.create(4, 6),
-                    UniformIntProvider.create(3, 4),
-                    UniformIntProvider.create(1, 2),
-                    -16,
-                    16,
-                    0.05,
-                    1)
-    );
-    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> DARK_GEODE = ConfiguredFeatures.register(
-            ArrayDiscriminatorUtil.getGeode(14),
-            Feature.GEODE,
-            new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCrystal[14]),
-                    BlockStateProvider.of(ArrayDiscriminatorUtil.getCorundum[14]),
-                    BlockStateProvider.of(Blocks.BASALT),
-                    BlockStateProvider.of(Blocks.TUFF),
-                    List.of(ArrayDiscriminatorUtil.getCorundumCluster[14].getDefaultState()),
-                    BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
-                    new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
-                    new GeodeCrackConfig(0.95, 2.0, 2), 0.35, 0.083, true,
-                    UniformIntProvider.create(4, 6),
-                    UniformIntProvider.create(3, 4),
-                    UniformIntProvider.create(1, 2),
-                    -16,
-                    16,
-                    0.05,
-                    1)
-    );
+public class QCUndergroundConfiguredFeatures  {
+    private static <B extends Block, C extends CorundumCluster> RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> register(B corundum, B crystal, C cluster, String colour) {
+        return QCUtil.registerGeode(corundum, crystal, cluster, colour);
+    }
+    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> BLACK_GEODE = register(QCBlocks.BLACK_CORUNDUM, QCBlocks.BLACK_CRYSTAL, QCBlocks.BLACK_CORUNDUM_CLUSTER, "black");
+    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> BLUE_GEODE = register(QCBlocks.BLUE_CORUNDUM, QCBlocks.BLUE_CRYSTAL, QCBlocks.BLUE_CORUNDUM_CLUSTER, "blue");
+    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> GREEN_GEODE = register(QCBlocks.GREEN_CORUNDUM, QCBlocks.GREEN_CRYSTAL, QCBlocks.GREEN_CORUNDUM_CLUSTER, "green");
+    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> INDIGO_GEODE = register(QCBlocks.INDIGO_CORUNDUM, QCBlocks.INDIGO_CRYSTAL, QCBlocks.INDIGO_CORUNDUM_CLUSTER, "indigo");
+    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> ORANGE_GEODE = register(QCBlocks.ORANGE_CORUNDUM, QCBlocks.ORANGE_CRYSTAL, QCBlocks.ORANGE_CORUNDUM_CLUSTER, "orange");
+    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> RED_GEODE = register(QCBlocks.RED_CORUNDUM, QCBlocks.RED_CRYSTAL, QCBlocks.RED_CORUNDUM_CLUSTER, "red");
+    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> PINK_GEODE = register(QCBlocks.PINK_CORUNDUM, QCBlocks.PINK_CRYSTAL, QCBlocks.PINK_CORUNDUM_CLUSTER, "pink");
+    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> WHITE_GEODE = register(QCBlocks.WHITE_CORUNDUM, QCBlocks.WHITE_CRYSTAL, QCBlocks.WHITE_CORUNDUM_CLUSTER, "white");
+    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> YELLOW_GEODE = register(QCBlocks.YELLOW_CORUNDUM, QCBlocks.YELLOW_CRYSTAL, QCBlocks.YELLOW_CORUNDUM_CLUSTER, "yellow");
+    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> CYAN_GEODE = register(QCBlocks.CYAN_CORUNDUM, QCBlocks.CYAN_CRYSTAL, QCBlocks.CYAN_CORUNDUM_CLUSTER, "cyan");
+    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> PURPLE_GEODE = register(QCBlocks.PURPLE_CORUNDUM, QCBlocks.PURPLE_CRYSTAL, QCBlocks.PURPLE_CORUNDUM_CLUSTER, "purple");
+    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> BROWN_GEODE = register(QCBlocks.BROWN_CORUNDUM, QCBlocks.BROWN_CRYSTAL, QCBlocks.BROWN_CORUNDUM_CLUSTER, "brown");
+    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> RAINBOW_GEODE = register(QCBlocks.RAINBOW_CORUNDUM, QCBlocks.RAINBOW_CRYSTAL, QCBlocks.RAINBOW_CORUNDUM_CLUSTER, "rainbow");
+    public static final RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> DARK_GEODE = register(QCBlocks.DARK_CORUNDUM, QCBlocks.DARK_CRYSTAL, QCBlocks.DARK_CORUNDUM_CLUSTER, "dark");
+
 }

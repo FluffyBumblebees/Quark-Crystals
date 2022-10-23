@@ -12,6 +12,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class DefaultBiomeFeaturesMixin {
     @Inject(method = "addAmethystGeodes", at = @At("HEAD"))
     private static void addQCGeneration(GenerationSettings.Builder generationSettings, CallbackInfo ci) {
-        QCDefaultBiomeFeatures.addQCGeodes(generationSettings);
+            QCDefaultBiomeFeatures.addQCGeodes(generationSettings);
     }
 }
