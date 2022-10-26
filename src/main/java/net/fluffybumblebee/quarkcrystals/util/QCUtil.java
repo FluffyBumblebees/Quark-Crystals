@@ -28,7 +28,7 @@ public class QCUtil {
 
     public static <B extends Block, C extends CorundumCluster> RegistryEntry<ConfiguredFeature<GeodeFeatureConfig, ?>> registerGeode(B corundum, B crystal, C cluster, String colour) {
         return ConfiguredFeatures.register(
-                colour + "_geode",
+                IdentifierUtil.ID + ":" + colour + "_geode",
                 Feature.GEODE,
                 new GeodeFeatureConfig(
                         new GeodeLayerConfig(
