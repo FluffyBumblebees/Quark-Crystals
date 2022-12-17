@@ -10,7 +10,6 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 
 @SuppressWarnings({"deprecation"})
@@ -22,17 +21,13 @@ public class CorundumCrystalPane extends PaneBlock {
                         .sounds(BlockSoundGroup.AMETHYST_BLOCK)
                         .nonOpaque()
                         .luminance(10)
-                        .lightLevel(5)
                         .strength(1.2F)
                         .requiresTool()
         );
     }
 
-    @Override
-    public boolean isSideInvisible(BlockState state, BlockState stateFrom, Direction direction) {
-        return stateFrom.isOf(this) || super.isSideInvisible(state, stateFrom, direction);
-    }
 
+    @Override
     public void onProjectileHit(World world, BlockState state, BlockHitResult hit, ProjectileEntity projectile) {
         if (!world.isClient) {
             BlockPos blockPos = hit.getBlockPos();
