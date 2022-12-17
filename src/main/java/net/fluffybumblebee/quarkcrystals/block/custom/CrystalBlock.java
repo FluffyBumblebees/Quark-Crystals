@@ -25,6 +25,6 @@ public class CrystalBlock extends AmethystBlock {
     }
     @Override
     public boolean isSideInvisible(BlockState state, BlockState stateFrom, Direction direction) {
-        return  stateFrom.isOf(this) || super.isSideInvisible(state, stateFrom, direction);
+        return stateFrom.getBlock() instanceof CrystalBlock || super.isSideInvisible(state, stateFrom, direction);
     }
 }
