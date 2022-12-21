@@ -40,7 +40,7 @@ public class CorundumBlock extends BuddingAmethystBlock {
 
     @Override
     public boolean isSideInvisible(BlockState state, BlockState stateFrom, Direction direction) {
-        return stateFrom.getBlock() instanceof CorundumBlock || super.isSideInvisible(state, stateFrom, direction);
+        return stateFrom.isOf(this) || super.isSideInvisible(state, stateFrom, direction);
     }
 
     @Override
